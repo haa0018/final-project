@@ -46,7 +46,28 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* TABLET STYLES: 760px to 1199px */
+@media screen and (min-width: 760px) {
 
+    .container {
+        width: 706px;
+        margin: 0 auto;
+    }
+    /* NOTHING ELSE! */ 
+}
+
+/* DESKTOP STYLES: ABOVE 1200px */
+@media screen and (min-width: 1200px) {
+
+    .container {
+        width: 1168px;
+        padding: 0 16px;
+        margin: 0 auto;
+    }
+
+    /* ALL YOUR DESKTOP STYLES HERE */
+
+}
 nav a:link,
 nav a:visited {
 	display:block;
@@ -115,7 +136,57 @@ nav li.current a:visited{
 	padding: 1rem;
 }
 
-.grid-container-services{
+.container-services{
 display: flex;
-background-color: #ffe6ac;
+background-color:white;
 }
+
+.grid-container-services{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+  }
+  
+  .item {
+	background-color: lightblue;
+	border: 1px solid black;
+	padding: 20px;
+  }
+  
+  .item:nth-child(1) {
+	grid-column: 1 / 3;
+  }
+
+  .header-vision {
+	background-image:url(../images/vision.jpg);
+	background-size: cover;
+	padding-top: 68px;
+	padding-bottom: 68px;
+  }
+  .header-vision button{
+	padding:1.5em;
+	background-color: #c78b07;
+	color: darkblue;
+	font-size: 20px;
+  }
+  .grid-container-team{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	  }
+
+.grid > div:nth-child(1), {
+  background-image:url(../images/john.jpg);
+  background-size:cover;
+  grid-column:span2;
+}
+
+.grid > div:nth-child(4) {
+background-image: url(../images/bob.jpg);
+background-size: cover;
+grid-column: span 2;
+}
+	  
+	
+	  
+  
+  
